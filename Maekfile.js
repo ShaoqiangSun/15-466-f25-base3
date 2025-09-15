@@ -266,8 +266,8 @@ function init_maek() {
 		DEFAULT_OPTIONS.CPP = ['g++', '-std=c++20', '-Wall', '-Werror', '-g'];
 		DEFAULT_OPTIONS.LINK = ['g++', '-std=c++20', '-Wall', '-Werror', '-g'];
 	} else if (maek.OS === 'macos') {
-		DEFAULT_OPTIONS.CPP = ['clang++', '-std=c++20', '-Wall', '-Werror', '-g'];
-		DEFAULT_OPTIONS.LINK = ['clang++', '-std=c++20', '-Wall', '-Werror', '-g'];
+		DEFAULT_OPTIONS.CPP = ['clang++', '-std=c++20', '-Wall', '-g'];
+		DEFAULT_OPTIONS.LINK = ['clang++', '-std=c++20', '-Wall', '-g'];
 	}
 
 	//any settings here override 'DEFAULT_OPTIONS':

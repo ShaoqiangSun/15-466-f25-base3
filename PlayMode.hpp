@@ -48,4 +48,22 @@ struct PlayMode : Mode {
 	//camera:
 	Scene::Camera *camera = nullptr;
 
+	std::vector< Sound::Sample const * > samples;
+	std::shared_ptr< Sound::PlayingSample > current_sample;
+	int sample_index = 0;
+
+	std::vector<int> sequence;
+	int seq_index = 0;
+	float timer = 0.0f;
+
+	enum class GameState {Playing, WaitingPlayerInput};
+	GameState game_state = GameState::Playing;
+	int player_input = -1;
+
+	const int max_incorrect_count = 2;
+	int incorrect_count = 0;
+
+	bool game_win = false;
+	bool game_lose = false;
+	
 };
